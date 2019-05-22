@@ -1,0 +1,14 @@
+src
+
+*/*
+__pycache__
+~*
+*.tmp
+*.pyc
+*.txt
+*.ini
+
+# Exceptions
+
+!requirements.txt
+!example_template.ini
