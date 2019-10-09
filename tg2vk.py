@@ -55,7 +55,7 @@ def setup_interactive(config_file, tg_client, vk_api):
     channels = [x for x in (
         x for x in tg_client(tgapi.messages.GetAllChatsRequest([])).chats
         if isinstance(x, tgtype.Channel)
-    ) if x.broadcast]  # TODO: Is x.broadcast == not x.megagroup?
+    ) if x.broadcast]  # means "is channel?", x.megagroup - "is supergroup?"
 
     for idx, item in enumerate(channels):
         print("{:>4}: {}".format(idx, item.title))
